@@ -50,9 +50,7 @@ app.use(cors({
 }));
 
 //routes setup
-app.use("/", (req, res) => {
-    res.send("Backend live");
-})
+
 app.use("/api/status", (req, res) => {
     res.send("server is live")
 })
