@@ -14,7 +14,7 @@ const server = http.createServer(app);
 // initialize socket.io server
 export const io = new Server(server, {
     cors: {
-    origin: "https://chat-app-eta-mocha.vercel.app",
+    origin: "https://quick-chat-0r40.onrender.com",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
   }
@@ -42,7 +42,7 @@ io.on("connection", (socket) => {
 })
 
 // middleware setup
-const allowedOrigins = ["https://chat-app-eta-mocha.vercel.app"];
+const allowedOrigins = ["https://quick-chat-0r40.onrender.com"];
 app.use(express.json({limit: "4mb"}));
 app.use(cors({
   origin: allowedOrigins,
